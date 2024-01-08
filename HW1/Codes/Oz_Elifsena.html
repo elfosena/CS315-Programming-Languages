@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    console.log('1. Initialize');
+    var himym = new Map([
+        ['marshall', 'Marshall Erikson'],
+        ['ted', 'Ted Mosby'],
+        ['barney', 'Barney Sitinson'],
+        ['robin', 'Robin Sherbatsky'],
+    ]);
+    console.log(himym);
+    
+    console.log('\n2. Get the value for a given key');
+    console.log('element with key robin: ' + himym.get('robin'));
+    
+    console.log('\n3. Add a new element');
+    himym.set('lily', 'Lily Aldrin');
+    console.log(himym);
+    
+    console.log('\n4. Remove an element');
+    himym.delete('robin');
+    console.log(himym);
+    
+    console.log('\n5. Modify the value of an existing element');
+    himym.set('lily', 'Lily Erikson');
+    console.log(himym);
+    
+    console.log('\n6. Search for the existence of a key');
+    console.log('himym contains element with key lily: ' + himym.has('lily'));
+    
+    console.log('\n7. Search for the existence of a value');
+    console.log(
+        'himym contains Ted Mosby: ' + [...himym.values()].includes('Ted Mosby')
+    );
+    
+    console.log("\n8. Print keys and values using foo")
+    
+    function foo(key, value) {
+        console.log(key + " : " + value)
+    }
+    
+    for (const key of himym.keys()) {
+        foo(key, himym.get(key));
+    }
+
+</script>
+</html>

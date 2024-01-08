@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+
+    // This aims to print numbers from 0 to 4 inclusive
+    console.log("\nConditional");
+    for (let i = 0; i <=4; i++) {
+        console.log("i: " + i);
+    }
+    
+    // This aims to print numbers from 0 to 4 inclusive
+    console.log("\nUnconditional");
+    for (let i = 0; i <= 4; i++) {
+        console.log("i: " + i);
+    
+        if (i == 3) {
+            console.log("Exit loop");
+            break; // When i is 3 the loops is exited
+        }
+    }
+    
+    console.log("\nUnlabeled");
+    for (let i = 0; i < 3; i++) { // This aims to print numbers from 0 to 2 inclusive
+        console.log("i: " + i)
+        for (let j = 3; j <= 4; j++) {// This aims to print numbers from 3 to 4 inclusive
+            if (j == 4) {
+            if (j == 4) {
+                break; // j is 4 / When j is 4 the inner loop is exited
+            }
+            }
+            console.log("j: " + j); 
+        }
+    }
+    
+    console.log("\nLabeled");
+    labeledLoop: for (let i = 0; i < 3; i++) { // This aims to print numbers from 0 to 2 inclusive
+        console.log("i: " + i)
+        for (let j = 3; j <= 4; j++) { // This aims to print numbers from 3 to 4 inclusive
+            if (j == 4) {
+                break labeledLoop; // j is 4 // When j is 4 the outer loop (labeledLoop) is exited
+            }
+            console.log("j: " + j); 
+        }
+    }
+
+
+</script>
+</html>
